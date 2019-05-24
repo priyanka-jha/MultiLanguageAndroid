@@ -27,9 +27,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         language = preferences.getString("language", "en");
@@ -39,6 +36,11 @@ public class MainActivity extends AppCompatActivity {
         config.locale = locale;
         getBaseContext().getResources().updateConfiguration(config,
                 getBaseContext().getResources().getDisplayMetrics());
+
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
 
 
 
